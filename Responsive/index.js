@@ -6,13 +6,13 @@ fetch('https://fakestoreapi.com/products')
         // let tableData = document.getElementById("table_body")
         cardData = "";
         data.map((value) => {
-            cardData += ` <img src="${value.image}" alt="Avatar" style="width:50px">
-            <div class="container">
-                <h4>${value.price}</h4>
-                <p>${value.category}</p>
-                <p>${value.title}</p>
-                <p>${value.description}</p>`
+            cardData += `<div class="card">
+             <img src="${value.image}" alt="Avatar" style="width:60px;">
+            <h2>${value.title}</h2>
+                <h4>${value.category}</h4>
+                <p>${value.price}</p>
+                <p><button>Add to Cart</button></p>
+                </div>`
         });
         document.getElementById("card-items").innerHTML = cardData;
     })
-
